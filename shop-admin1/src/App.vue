@@ -2,6 +2,7 @@
 <template>
 <div>
  <!-- <button class="btn">按钮</button> -->
+
 </div>
 <router-view></router-view>
 </template>
@@ -27,10 +28,15 @@ filters: {},
 //自定义指令
 directives: {},
 }
+const a=[
+  1,2
+  ,3,4
+]
 </script>
 <!-- css样式 -->
 <style scoped>
 /* .btn{
   @apply bg-purple-500 text-indigo-50 px-4 py-2   rounded hover:( bg-light-900) focus:(ring-8) transition-all duration-1000 ;
 } */
+
 </style>
