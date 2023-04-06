@@ -40,8 +40,11 @@
 <script setup>
 import { reactive ,ref} from 'vue';
 import {login} from "~/api/manager.js"
+import { ElNotification} from "element-plus"
+import {useRouter} from "vue-router"
 // import { User,Lock } from '@element-plus/icons-vue'
 // do not use same name with ref
+const router=useRouter();
 const form = reactive({
   username:'',
   password:''
@@ -63,6 +66,12 @@ const onSubmit = () => {
     
    login(form).then(response=>{
      console.log("response=>",response.date.date)
+     ElNotification({
+        message:"登录成功",
+        type:'success',
+     });
+
+     router.push('/')
     }).catch(error=>{
         ElNotification({
             message:error.response.data.msg,
