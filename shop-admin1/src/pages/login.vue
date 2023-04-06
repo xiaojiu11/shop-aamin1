@@ -40,7 +40,7 @@
 <script setup>
 import { reactive ,ref} from 'vue';
 import {login} from "~/api/manager.js"
-import { ElNotification} from "element-plus"
+import { ElNotification } from 'element-plus'
 import {useRouter} from "vue-router"
 // import { User,Lock } from '@element-plus/icons-vue'
 // do not use same name with ref
@@ -65,7 +65,7 @@ const onSubmit = () => {
     if(!valid) return false;
     
    login(form).then(response=>{
-     console.log("response=>",response.date.date)
+     console.log("response=>",response.data.data)
      ElNotification({
         message:"登录成功",
         type:'success',
