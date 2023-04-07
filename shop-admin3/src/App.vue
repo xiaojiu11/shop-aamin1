@@ -17,7 +17,7 @@ import TheWelcome from './components/TheWelcome.vue'
       <HelloWorld msg="You did it!" />
     </div>
   </header>
-  1 2 2 2
+  1 2 2 2dddd
 
   <main>
     <TheWelcome />
